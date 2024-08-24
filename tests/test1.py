@@ -1,6 +1,5 @@
 import unittest
 from app import app
-from validate_log import validate_log
 from io import BytesIO
 
 '''

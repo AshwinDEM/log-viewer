@@ -3,7 +3,6 @@ import os
 import shutil
 import atexit
 from werkzeug.utils import secure_filename
-from process_log import preprocess_log
 import re
 
 app = Flask(__name__)
