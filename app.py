@@ -4,6 +4,7 @@ import shutil
 import atexit
 from werkzeug.utils import secure_filename
 from process_log import preprocess_log
+import re
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -27,9 +28,14 @@ def upload_file():
         file.save(file_path)
 
         with open(file_path, 'r') as f:
-            first_four_chars = f.read(4)
-            if first_four_chars != '.LOG':
+            lines = f.readlines()
+            if len(lines) < 2 or lines[0].strip() != '.LOG':
                 return 'Invalid file content. The file must start with .LOG.'
+            
+            # Check the second line for the time and date format
+            time_date_pattern = r'^\d{2}:\d{2} \d{2}-\d{2}-\d{4}$'
+            if not re.match(time_date_pattern, lines[1].strip()):
+                return 'Invalid file content. The second line must be in the format HH:MM DD-MM-YYYY.'
 
         # content = preprocess_log(file_path)
 
