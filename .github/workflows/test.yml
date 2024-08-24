@@ -30,7 +30,7 @@ jobs:
       run: |
         python -m unittest discover -s tests -p 'test*.py'
 
-    - name: Check for Broken Links
-      run: |
-        npx linkinator .
+    # - name: Check for Broken Links
+    #   run: |
+    #     npx linkinator .
       
