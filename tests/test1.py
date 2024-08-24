@@ -10,24 +10,24 @@ Root
 │       └── Contains: 'Log Viewer'
 │
 ├── Upload File
-    ├── File Type: .txt
-    │   ├── Starts with .LOG
-    │   │   ├── Valid Time and Date Format
-    │   │   │   └── test_upload_txt_file_with_log_and_datetime
-    │   │   │       ├── Status Code: 200
-    │   │   │       └── Contains: 'File successfully uploaded and is a .txt file.'
-    │   │   └── Invalid Time and Date Format
-    │   │       └── test_upload_txt_file_with_log_and_invalid_datetime
-    │   │           ├── Status Code: 200
-    │   │           └── Contains: 'Invalid file content. The second line must be in the format HH:MM DD-MM-YYYY.'
-    │   └── Does Not Start with .LOG
-    │       └── test_upload_txt_file_without_log
-    │           ├── Status Code: 200
-    │           └── Contains: 'Invalid file content. The file must start with .LOG.'
-    └── File Type: Not .txt
-        └── test_upload_non_txt_file
-            ├── Status Code: 200
-            └── Contains: 'Invalid file format. Please upload a .txt file.
+│   ├── File Type: .txt
+│   │   ├── Starts with .LOG
+│   │   │   ├── Valid Time and Date Format
+│   │   │   │   └── test_upload_txt_file_with_log_and_datetime
+│   │   │   │       ├── Status Code: 200
+│   │   │   │       └── Contains: 'File successfully uploaded and is a .txt file.'
+│   │   │   └── Invalid Time and Date Format
+│   │   │       └── test_upload_txt_file_with_log_and_invalid_datetime
+│   │   │           ├── Status Code: 200
+│   │   │           └── Contains: 'Invalid file content. The second line must be in the format HH:MM DD-MM-YYYY.'
+│   │   └── Does Not Start with .LOG
+│   │       └── test_upload_txt_file_without_log
+│   │           ├── Status Code: 200
+│   │           └── Contains: 'Invalid file content. The file must start with .LOG.'
+│   └── File Type: Not .txt
+│       └── test_upload_non_txt_file
+│           ├── Status Code: 200
+│           └── Contains: 'Invalid file format. Please upload a .txt file.
 '''
 
 
