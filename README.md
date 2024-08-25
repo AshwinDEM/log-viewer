@@ -1,21 +1,3 @@
-<!-- # Log Viewer
-In windows, if you create a new text file and write .LOG in the first line of the file, it becomes a log file.
-This project aims to create a way to easily view and understand log files.
-
-Basic structure of a windows log file
-
-
-```
-.LOG
-HH:MM DD-MM-YYYY
-<Log Entry>
-HH:MM DD-MM-YYYY
-<Log Entry>
-```
-
-The aim is to create a project that can view log files in a manner that is easy for people, and maybe also manipulate the log entries. -->
-
-
 # Log Viewer
 In windows, if you create a new text file and write .LOG in the first line of the file, it becomes a log file.
 This project aims to create a way to easily view and understand log files.
@@ -40,7 +22,7 @@ The aim is to create a project that can view log files in a manner that is easy 
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/AshwinDEm/log-viewer.git
+    git clone https://github.com/AshwinDEM/log-viewer.git
     cd log-viewer
     ```
 
